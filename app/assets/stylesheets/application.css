@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.nav {
+  background-color: #ffc107; /* Bootstrap's warning color */
+  border-bottom: 3px solid #e0a800; /* Slightly darker shade for contrast */
+}
+
+/* Card Styles */
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Link Styles */
+.card-link {
+  color: #ffc107 !important; /* Consistent with the navbar color */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-link:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff !important;
+}
+
+/* Responsive Grid */
+@media (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+

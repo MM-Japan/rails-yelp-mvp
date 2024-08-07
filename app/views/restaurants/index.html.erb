@@ -1,0 +1,17 @@
+<div class="nav d-flex justify-content-between align-items-center py-3 px-4 bg-warning">
+  <h1 class="text-white">Restaurants</h1>
+  <div>
+    <%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-dark" %>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="cards">
+    <% @restaurants.each do |restaurant| %>
+      <div class="card">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://loremflickr.com/320/240/<%=["restaurant", "cafe", "bar", "dinner", "food"].sample%>')">
+          <%= link_to restaurant.name, restaurant_path(restaurant), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
